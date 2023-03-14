@@ -3,6 +3,7 @@
     "cov": "nyc report --reporter=text-lcov",
     "cov-html": "nyc report --reporter=html",
     "build": "rollup -c",
+    "release": "rollup -c --environment mode:production",
     "prepublishOnly": "npm test",
     "start": "npm run watch & npm run server",
     "watch": "rollup -c -w 'src/**'",
@@ -10,21 +11,23 @@
     "test": "nyc --require esm --require jsdom-global/register --require @riotjs/register mocha src/**/*.spec.js"
   },
   "devDependencies": {
-    "@riotjs/compiler": "^6.3.2",
+    "@riotjs/compiler": "^6.4.2",
     "@riotjs/register": "^6.0.1",
-    "@rollup/plugin-commonjs": "^22.0.2",
-    "@rollup/plugin-node-resolve": "^13.3.0",
-    "browser-sync": "^2.27.10",
-    "chai": "^4.3.6",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-terser": "^0.4.0",
+    "browser-sync": "^2.28.3",
+    "chai": "^4.3.7",
     "esm": "^3.2.25",
-    "jsdom": "^20.0.0",
+    "jsdom": "^21.1.0",
     "jsdom-global": "^3.0.2",
-    "mocha": "^8.4.0",
+    "mocha": "^10.2.0",
     "nyc": "^15.1.0",
-    "rollup": "^2.78.0",
-    "rollup-plugin-riot": "^6.0.0"
+    "rollup": "^3.19.1",
+    "rollup-plugin-riot": "^6.0.0",
+    "fast-glob": "^3.2.12"
   },
   "dependencies": {
-    "riot": "^7.0.3"
+    "riot": "^7.1.0"
   }
 }
