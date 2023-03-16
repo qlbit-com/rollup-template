@@ -1,6 +1,6 @@
 import glob from 'fast-glob'
 
-export default function rollupRiotRegister( paths = [], source = "riot:components" ) {
+export default ( paths = [], source = "riot:components" ) => {
   const camelize = ( str ) =>
       ( ' ' + str ).toLowerCase().replace( /[-_\s.]+(.)?/g, ( _, c ) => c ? c.toUpperCase() : '' )
   return {

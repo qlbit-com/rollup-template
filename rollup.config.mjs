@@ -2,7 +2,7 @@ import riot from 'rollup-plugin-riot'
 import nodeResolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import terser from '@rollup/plugin-terser'
-import rollupRiotRegister from './rollup_riot_register.mjs'
+import riotRegister from './rollup_riot_register.mjs'
 
 const devMode = 'production' !== process.env.mode //DP: set for release target in package.json
 console.log( `${ devMode ? 'development' : 'production' } mode bundle` )
@@ -35,6 +35,6 @@ export default {
     riot(),
     nodeResolve(),
     commonjs(),
-    rollupRiotRegister( [ './src/**/*.riot' ] )
+    riotRegister( [ './src/**/*.riot' ] )
   ]
 }
