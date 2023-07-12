@@ -24,7 +24,7 @@
     "mocha": "^10.2.0",
     "nyc": "^15.1.0",
     "rollup": "^3.26.2",
-    "rollup-plugin-riot": "^7.0.0",
+    "rollup-plugin-riot": "^6.0.0",
     "fast-glob": "^3.3.0"
   },
   "dependencies": {
