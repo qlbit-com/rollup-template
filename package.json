@@ -5,29 +5,28 @@
     "build": "rollup -c",
     "release": "rollup -c --environment mode:production",
     "prepublishOnly": "npm test",
-    "start": "npm run watch & npm run server",
-    "watch": "rollup -c -w 'src/**'",
-    "server": "browser-sync start --files 'dist/*, style.css, index.html' --server",
+    "watch": "rollup -c -w",
     "test": "nyc --require esm --require jsdom-global/register --require @riotjs/register mocha src/**/*.spec.js"
   },
   "devDependencies": {
-    "@riotjs/compiler": "^6.4.2",
-    "@riotjs/register": "^6.0.1",
-    "@rollup/plugin-commonjs": "^25.0.2",
-    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@riotjs/compiler": "^9.0.6",
+    "@riotjs/register": "^9.0.0",
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.1",
     "@rollup/plugin-terser": "^0.4.3",
-    "browser-sync": "^2.29.3",
-    "chai": "^4.3.7",
+    "rollup-plugin-serve-proxy": "^1.1.4",
+    "rollup-plugin-livereload": "^2.0.5",
+    "chai": "^4.3.8",
     "esm": "^3.2.25",
     "jsdom": "^22.1.0",
     "jsdom-global": "^3.0.2",
     "mocha": "^10.2.0",
     "nyc": "^15.1.0",
-    "rollup": "^3.26.2",
-    "rollup-plugin-riot": "^6.0.0",
-    "fast-glob": "^3.3.0"
+    "rollup": "^3.28.1",
+    "rollup-plugin-riot": "^9.0.1",
+    "rollup-plugin-riot-register": "^1.0.1"
   },
   "dependencies": {
-    "riot": "^7.1.0"
+    "riot": "^9.0.4"
   }
 }
